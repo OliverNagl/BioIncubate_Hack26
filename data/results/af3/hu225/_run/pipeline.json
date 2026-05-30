@@ -1,0 +1,18 @@
+{
+  "steps": [
+    {
+      "block_name": "af3",
+      "name": "af3",
+      "pipeline_input_names": [],
+      "parquet": "af3/output.parquet",
+      "execution_summary": {
+        "records": 1,
+        "successful_records": 1,
+        "failed_records": 0,
+        "wall_seconds": 112.51742692105472,
+        "gpu_seconds": 112.51742692105472
+      }
+    }
+  ],
+  "completed_updates": []
+}

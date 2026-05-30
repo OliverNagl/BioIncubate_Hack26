@@ -1,0 +1,51 @@
+{
+  "ptm": 0.6596407890319824,
+  "iptm": 0.29989174008369446,
+  "ranking_score": 0.37184154987335205,
+  "plddt_mean": 0.8431049585342407,
+  "plddt_min": 0.30761098861694336,
+  "plddt_max": 0.9808564782142639,
+  "chain_ids": [
+    "A",
+    "B"
+  ],
+  "chain_pair_iptm": [
+    [
+      0.7752346396446228,
+      0.2319772094488144
+    ],
+    [
+      0.14489831030368805,
+      0.8000485897064209
+    ]
+  ],
+  "chain_ptm": [
+    0.7752346396446228,
+    0.8000485897064209
+  ],
+  "chain_iptm": [
+    0.2319772094488144,
+    0.14489831030368805
+  ],
+  "chain_pair_pae_min": [
+    [
+      0.2505511939525604,
+      7.189668655395508
+    ],
+    [
+      16.26065444946289,
+      0.250588595867157
+    ]
+  ],
+  "metadata": {
+    "input_format": "af3json",
+    "input": "/mnt/home/olnagl/pipelines/t3_capsids/data/inputs/Cetuximab/complex.json",
+    "af3_name": "Cetuximab_complex",
+    "af3_version": 1,
+    "af3_dialect": "alphafold3",
+    "job_id": "complex",
+    "seed": 42
+  },
+  "schema_version": "esmfold2_af3_style_confidences_v1",
+  "note": "Large ESMFold2 metric tensors are stored in *_confidences.pkl when --full-metrics is used; this JSON intentionally contains only basic metrics."
+}

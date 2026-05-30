@@ -1,0 +1,26 @@
+Environment variable CCD_MIRROR_PATH not set. Will not be able to use function requiring this variable. To set it you may:
+  (1) add the line 'export VAR_NAME=path/to/variable' to your .bashrc or .zshrc file
+  (2) set it in your current shell with 'export VAR_NAME=path/to/variable'
+  (3) write it to a .env file in the root of the atomworks.io repository
+Environment variable PDB_MIRROR_PATH not set. Will not be able to use function requiring this variable. To set it you may:
+  (1) add the line 'export VAR_NAME=path/to/variable' to your .bashrc or .zshrc file
+  (2) set it in your current shell with 'export VAR_NAME=path/to/variable'
+  (3) write it to a .env file in the root of the atomworks.io repository
+Traceback (most recent call last):
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 298, in <module>
+    main()
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 231, in main
+    jobs, output_dir = load_jobs(args)
+                       ^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 90, in load_jobs
+    return [read_input_job(args.input, input_format=args.format)], output_dir
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/examples/_esmfold2_inputs.py", line 612, in read_input_job
+    return read_af3_json(path)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/examples/_esmfold2_inputs.py", line 331, in read_af3_json
+    input_spec = StructurePredictionInput(sequences=_parse_af3_sequences(data, path.parent))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/examples/_esmfold2_inputs.py", line 291, in _parse_af3_sequences
+    raise ValueError(f"sequences[{index}] must contain exactly one of protein, dna, rna, or ligand")
+ValueError: sequences[0] must contain exactly one of protein, dna, rna, or ligand

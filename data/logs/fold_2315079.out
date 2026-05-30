@@ -1,0 +1,26 @@
+[Sat May 30 05:07:29 PDT 2026] host=g2151 job=2315079 dir=/home/olnagl/pipelines/t3_capsids/data
+[Sat May 30 05:07:29 PDT 2026] Preparing inputs
+[prepare] EGFR D3: 164 aa -> data/egfr_domain3.{pdb,fasta}
+[prepare] Cetuximab: inputs/Cetuximab/{scfv.fasta,complex.json}
+[prepare] ConvergeAB: inputs/ConvergeAB/{scfv.fasta,complex.json}
+[prepare] hu225: inputs/hu225/{scfv.fasta,complex.json}
+
+variant          VH_len       VL_len     scFv_len  EGFR_D3_len
+Cetuximab           119          106          240          164
+ConvergeAB          119          106          240          164
+hu225               119          107          241          164
+[Sat May 30 05:07:31 PDT 2026] Running fold pipeline
+Loading model once for 1 job(s)
+Loading CCD dictionary from /opt/esmfold2/models/ESMFold2/ccd.pkl
+Running complex seed=42: /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/Cetuximab/complex.json -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab/complex/complex_model.cif
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab/complex/seed-42_sample-0/complex_seed-42_sample-0_model.cif: pLDDT mean=0.843, pTM=0.660, ipTM=0.300
+[fold] variants=['Cetuximab'] engines=['esm2'] seeds=['42'] dry_run=False
+
+[fold] === Cetuximab / esm2 ===  start=05:08:03
+[fold] ESM2 Cetuximab: apptainer exec --nv /net/software/containers/users/magnusb/esmfold2.sif esmfold2_predict --input /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/Cetuximab/complex.json --output-dir /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab --full-metrics
+[fold] ESM2 Cetuximab: pkl -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab/complex/complex_confidences.pkl
+[fold] ESM2 Cetuximab: pkl -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab/complex/seed-42_sample-0/complex_seed-42_sample-0_confidences.pkl
+[fold] === Cetuximab / esm2 === ok (211.7s)
+
+[fold] 1/1 jobs completed successfully
+[Sat May 30 05:11:39 PDT 2026] Done — results in results/

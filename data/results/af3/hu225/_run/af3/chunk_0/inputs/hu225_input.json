@@ -1,0 +1,32 @@
+{
+    "name": "hu225_input",
+    "sequences": [
+        {
+            "protein": {
+                "id": "A",
+                "sequence": "EVQLVESGGGLVQPGGSLRLSCAASGFSLTNYGVHWVRQAPGKGLEWLGVIWSGGNTDYNTPFTSRLTINKDNSKNTVYLQMNSLRAEDTAVYYCARALTYYDYEFAYWGQGTLVTVSSGGGGSGGGGSGGGGSDILLTQSPGTLSLSPGERATLSCRASQSIGTNIHWYQQKPGQAPRLLIKYASESISGIPDRFSGSGSGTDFTLTISRLEPEDFAVYYCQQNNNWPTTFGQGTKLEIK",
+                "unpairedMsa": "",
+                "unpairedMsaPath": null,
+                "pairedMsa": "",
+                "pairedMsaPath": null,
+                "templates": []
+            }
+        },
+        {
+            "protein": {
+                "id": "B",
+                "sequence": "EEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQK",
+                "unpairedMsa": "",
+                "unpairedMsaPath": null,
+                "pairedMsa": "",
+                "pairedMsaPath": null,
+                "templates": []
+            }
+        }
+    ],
+    "modelSeeds": [
+        1
+    ],
+    "dialect": "alphafold3",
+    "version": 1
+}

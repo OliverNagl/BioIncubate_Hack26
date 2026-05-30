@@ -1,0 +1,276 @@
+[Sat May 30 05:21:48 PDT 2026] host=g2125 job=2316252 dir=/home/olnagl/pipelines/t3_capsids/data
+[Sat May 30 05:21:48 PDT 2026] Preparing inputs
+[prepare] EGFR D3: 164 aa -> data/egfr_domain3.{pdb,fasta}
+[prepare] Cetuximab: inputs/Cetuximab/{scfv.fasta,complex.json}
+[prepare] ConvergeAB: inputs/ConvergeAB/{scfv.fasta,complex.json}
+[prepare] hu225: inputs/hu225/{scfv.fasta,complex.json}
+
+variant          VH_len       VL_len     scFv_len  EGFR_D3_len
+Cetuximab           119          106          240          164
+ConvergeAB          119          106          240          164
+hu225               119          107          241          164
+[Sat May 30 05:21:52 PDT 2026] Running fold pipeline
+[fold] variants=['Cetuximab', 'ConvergeAB', 'hu225'] engines=['af3', 'esm2'] seeds=['42'] dry_run=False
+
+[fold] === Cetuximab / af3 ===  start=05:22:26
+[fold] AF3 Cetuximab: engine.run(af3, data=Cetuximab_input.cif, diffusion_batch_size=5) -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab
+LOCAL Detected 1 local GPU(s), routing af3 to local execution
+Running 1 jobs for af3 (local)
+INFO:2026-05-30 05:22:40,584:jax._src.xla_bridge:812: Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+I0530 05:22:40.584486 127676614070592 xla_bridge.py:812] Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+W0530 05:22:40.742438 1235297 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+W0530 05:22:40.753390 1235199 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+I0530 05:22:52.150080 127676614070592 pipeline.py:177] processing 
+Cetuximab_input, random_seed=1
+I0530 05:22:52.745343 127676614070592 pipeline.py:270] Calculating bucket size 
+for input with 404 tokens.
+I0530 05:22:52.745691 127676614070592 pipeline.py:276] Got bucket size 512 for 
+input with 404 tokens, resulting in 108 padded tokens.
+I0530 05:22:58.474057 127676614070592 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_gated_linear_unit.json
+I0530 05:22:58.734719 127676614070592 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_flash_attention.json
+/opt/af3-env/lib/python3.12/site-packages/alphafold3/model/network/featurization
+.py:104: UserWarning: Explicitly requested dtype int64 requested in 
+broadcasted_iota is not available, and will be truncated to dtype int32. To 
+enable more dtypes, set the jax_enable_x64 configuration option or the 
+JAX_ENABLE_X64 shell environment variable. See 
+https://github.com/jax-ml/jax#current-gotchas for more.
+  iota = jax.lax.broadcasted_iota(jnp.int64, logits.shape, axis)
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+Skipping running the data pipeline.
+Found local devices: [CudaDevice(id=0)]
+Building model from scratch...
+Processing fold inputs.
+Processing fold input #1
+Processing fold input Cetuximab_input
+Checking we can load the model parameters...
+Skipping data pipeline...
+Output directory: 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_
+0/outputs/Cetuximab_input
+Writing model input JSON to 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_
+0/outputs/Cetuximab_input
+Predicting 3D structure for Cetuximab_input for seed(s) (1,)...
+Featurising data for seeds (1,)...
+Featurising data with seed 1.
+Featurising data with seed 1 took 6.14 seconds.
+Featurising data for seeds (1,) took  12.54 seconds.
+Running model inference for seed 1...
+Running model inference for seed 1 took  73.99 seconds.
+Extracting output structures (one per sample) for seed 1...
+Extracting output structures (one per sample) for seed 1 took  0.92 seconds.
+Running model inference and extracting output structures for seed 1 took 74.90 
+seconds.
+Running model inference and extracting output structures for seeds (1,) took 
+74.90 seconds.
+Writing outputs for Cetuximab_input for seed(s) (1,)...
+Done processing fold input Cetuximab_input.
+Done processing 1 fold inputs (0 skipped).
+╭────────────────────────────────────────────────╮
+│ ✓ compiled outputs for af3                     │
+╰────────────────────────────────────────────────╯
+Loading model once for 1 job(s)
+Loading CCD dictionary from /opt/esmfold2/models/ESMFold2/ccd.pkl
+Running complex seed=42: /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/Cetuximab/complex.json -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab/complex/complex_model.cif
+[fold] AF3 Cetuximab: surfaced 1 output file(s) under /mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab
+[fold] === Cetuximab / af3 === ok (112.0s)
+
+[fold] === Cetuximab / esm2 ===  start=05:24:18
+[fold] ESM2 Cetuximab: apptainer exec --nv /net/software/containers/users/magnusb/esmfold2.sif esmfold2_predict --input /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/Cetuximab/complex.json --output-dir /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/Cetuximab --full-metrics
+[fold] ESM2 Cetuximab: non-zero exit 1; continuing
+[fold] === Cetuximab / esm2 === FAILED (173.5s)
+
+[fold] === ConvergeAB / af3 ===  start=05:27:12
+[fold] AF3 ConvergeAB: engine.run(af3, data=ConvergeAB_input.cif, diffusion_batch_size=5) -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB
+LOCAL Detected 1 local GPU(s), routing af3 to local execution
+Running 1 jobs for af3 (local)
+INFO:2026-05-30 05:27:25,464:jax._src.xla_bridge:812: Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+I0530 05:27:25.464680 132031205577024 xla_bridge.py:812] Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+W0530 05:27:25.621513 1239746 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+W0530 05:27:25.632307 1239643 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+I0530 05:27:37.182731 132031205577024 pipeline.py:177] processing 
+ConvergeAB_input, random_seed=1
+I0530 05:27:37.771800 132031205577024 pipeline.py:270] Calculating bucket size 
+for input with 404 tokens.
+I0530 05:27:37.772118 132031205577024 pipeline.py:276] Got bucket size 512 for 
+input with 404 tokens, resulting in 108 padded tokens.
+I0530 05:27:43.380889 132031205577024 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_gated_linear_unit.json
+I0530 05:27:43.629159 132031205577024 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_flash_attention.json
+/opt/af3-env/lib/python3.12/site-packages/alphafold3/model/network/featurization
+.py:104: UserWarning: Explicitly requested dtype int64 requested in 
+broadcasted_iota is not available, and will be truncated to dtype int32. To 
+enable more dtypes, set the jax_enable_x64 configuration option or the 
+JAX_ENABLE_X64 shell environment variable. See 
+https://github.com/jax-ml/jax#current-gotchas for more.
+  iota = jax.lax.broadcasted_iota(jnp.int64, logits.shape, axis)
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+Skipping running the data pipeline.
+Found local devices: [CudaDevice(id=0)]
+Building model from scratch...
+Processing fold inputs.
+Processing fold input #1
+Processing fold input ConvergeAB_input
+Checking we can load the model parameters...
+Skipping data pipeline...
+Output directory: 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk
+_0/outputs/ConvergeAB_input
+Writing model input JSON to 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk
+_0/outputs/ConvergeAB_input
+Predicting 3D structure for ConvergeAB_input for seed(s) (1,)...
+Featurising data for seeds (1,)...
+Featurising data with seed 1.
+Featurising data with seed 1 took 6.02 seconds.
+Featurising data for seeds (1,) took  12.34 seconds.
+Running model inference for seed 1...
+Running model inference for seed 1 took  73.37 seconds.
+Extracting output structures (one per sample) for seed 1...
+Extracting output structures (one per sample) for seed 1 took  0.90 seconds.
+Running model inference and extracting output structures for seed 1 took 74.27 
+seconds.
+Running model inference and extracting output structures for seeds (1,) took 
+74.27 seconds.
+Writing outputs for ConvergeAB_input for seed(s) (1,)...
+Done processing fold input ConvergeAB_input.
+Done processing 1 fold inputs (0 skipped).
+╭────────────────────────────────────────────────╮
+│ ✓ compiled outputs for af3                     │
+╰────────────────────────────────────────────────╯
+Loading model once for 1 job(s)
+Loading CCD dictionary from /opt/esmfold2/models/ESMFold2/ccd.pkl
+Running complex seed=42: /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/ConvergeAB/complex.json -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/ConvergeAB/complex/complex_model.cif
+[fold] AF3 ConvergeAB: surfaced 1 output file(s) under /mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB
+[fold] === ConvergeAB / af3 === ok (111.2s)
+
+[fold] === ConvergeAB / esm2 ===  start=05:29:03
+[fold] ESM2 ConvergeAB: apptainer exec --nv /net/software/containers/users/magnusb/esmfold2.sif esmfold2_predict --input /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/ConvergeAB/complex.json --output-dir /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/ConvergeAB --full-metrics
+[fold] ESM2 ConvergeAB: non-zero exit 1; continuing
+[fold] === ConvergeAB / esm2 === FAILED (158.7s)
+
+[fold] === hu225 / af3 ===  start=05:31:42
+[fold] AF3 hu225: engine.run(af3, data=hu225_input.cif, diffusion_batch_size=5) -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/hu225
+LOCAL Detected 1 local GPU(s), routing af3 to local execution
+Running 1 jobs for af3 (local)
+INFO:2026-05-30 05:31:55,399:jax._src.xla_bridge:812: Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+I0530 05:31:55.399090 140287874896192 xla_bridge.py:812] Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+W0530 05:31:55.555415 1244295 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+W0530 05:31:55.566034 1244215 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+I0530 05:32:07.189835 140287874896192 pipeline.py:177] processing hu225_input, 
+random_seed=1
+I0530 05:32:07.781087 140287874896192 pipeline.py:270] Calculating bucket size 
+for input with 405 tokens.
+I0530 05:32:07.781399 140287874896192 pipeline.py:276] Got bucket size 512 for 
+input with 405 tokens, resulting in 107 padded tokens.
+I0530 05:32:13.548854 140287874896192 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_gated_linear_unit.json
+I0530 05:32:13.804938 140287874896192 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_flash_attention.json
+/opt/af3-env/lib/python3.12/site-packages/alphafold3/model/network/featurization
+.py:104: UserWarning: Explicitly requested dtype int64 requested in 
+broadcasted_iota is not available, and will be truncated to dtype int32. To 
+enable more dtypes, set the jax_enable_x64 configuration option or the 
+JAX_ENABLE_X64 shell environment variable. See 
+https://github.com/jax-ml/jax#current-gotchas for more.
+  iota = jax.lax.broadcasted_iota(jnp.int64, logits.shape, axis)
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+Skipping running the data pipeline.
+Found local devices: [CudaDevice(id=0)]
+Building model from scratch...
+Processing fold inputs.
+Processing fold input #1
+Processing fold input hu225_input
+Checking we can load the model parameters...
+Skipping data pipeline...
+Output directory: 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/hu225/_run/af3/chunk_0/ou
+tputs/hu225_input
+Writing model input JSON to 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/hu225/_run/af3/chunk_0/ou
+tputs/hu225_input
+Predicting 3D structure for hu225_input for seed(s) (1,)...
+Featurising data for seeds (1,)...
+Featurising data with seed 1.
+Featurising data with seed 1 took 6.16 seconds.
+Featurising data for seeds (1,) took  12.47 seconds.
+Running model inference for seed 1...
+Running model inference for seed 1 took  75.30 seconds.
+Extracting output structures (one per sample) for seed 1...
+Extracting output structures (one per sample) for seed 1 took  0.91 seconds.
+Running model inference and extracting output structures for seed 1 took 76.21 
+seconds.
+Running model inference and extracting output structures for seeds (1,) took 
+76.21 seconds.
+Writing outputs for hu225_input for seed(s) (1,)...
+Done processing fold input hu225_input.
+Done processing 1 fold inputs (0 skipped).
+╭────────────────────────────────────────────────╮
+│ ✓ compiled outputs for af3                     │
+╰────────────────────────────────────────────────╯
+Loading model once for 1 job(s)
+Loading CCD dictionary from /opt/esmfold2/models/ESMFold2/ccd.pkl
+Running complex seed=42: /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/hu225/complex.json -> /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/hu225/complex/complex_model.cif
+[fold] AF3 hu225: surfaced 1 output file(s) under /mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/hu225
+[fold] === hu225 / af3 === ok (113.0s)
+
+[fold] === hu225 / esm2 ===  start=05:33:35
+[fold] ESM2 hu225: apptainer exec --nv /net/software/containers/users/magnusb/esmfold2.sif esmfold2_predict --input /mnt/home/olnagl/pipelines/t3_capsids/data/inputs/hu225/complex.json --output-dir /mnt/home/olnagl/pipelines/t3_capsids/data/results/esm2/hu225 --full-metrics
+[fold] ESM2 hu225: non-zero exit 1; continuing
+[fold] === hu225 / esm2 === FAILED (153.1s)
+
+[fold] 3/6 jobs completed successfully

@@ -1,0 +1,230 @@
+Environment variable CCD_MIRROR_PATH not set. Will not be able to use function requiring this variable. To set it you may:
+  (1) add the line 'export VAR_NAME=path/to/variable' to your .bashrc or .zshrc file
+  (2) set it in your current shell with 'export VAR_NAME=path/to/variable'
+  (3) write it to a .env file in the root of the atomworks.io repository
+Environment variable PDB_MIRROR_PATH not set. Will not be able to use function requiring this variable. To set it you may:
+  (1) add the line 'export VAR_NAME=path/to/variable' to your .bashrc or .zshrc file
+  (2) set it in your current shell with 'export VAR_NAME=path/to/variable'
+  (3) write it to a .env file in the root of the atomworks.io repository
+INFO:pipelines.engine.resolve:Detected 1 CUDA GPUs, using GPULocalTaskRunner
+INFO:pipelines.orchestration.gpu_local_taskrunner:GPULocalTaskRunner initialized with 1 GPUs, max_workers=1
+af3:   0%|          | 0/1 [00:00<?, ?it/s]
+get_data:   0%|          | 0/1 [00:00<?, ?it/s][AWARNING:atomworks.io:Field b_factor not found in file, ignoring.
+WARNING:atomworks.io:Field occupancy not found in file, ignoring.
+
+get_data: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s][Aget_data: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]
+af3: 100%|██████████| 1/1 [01:51<00:00, 111.41s/it]af3: 100%|██████████| 1/1 [01:51<00:00, 111.41s/it]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  2.16it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:01,  2.32it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:01,  2.35it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:01<00:00,  2.41it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:02<00:00,  2.42it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:02<00:00,  2.78it/s]
+Traceback (most recent call last):
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 298, in <module>
+    main()
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 255, in main
+    result = builder.fold(
+             ^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/esm/models/esmfold2/processor.py", line 337, in fold
+    output = model(
+             ^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2.py", line 972, in forward
+    z = self._run_one_loop(
+        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2.py", line 805, in _run_one_loop
+    z = self.folding_trunk(z, pair_attention_mask=pair_mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2639, in forward
+    pair = fn(pair)
+           ^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2595, in forward
+    pair = self.row_drop(pair, self.tri_mul_in(pair, mask=pair_attention_mask))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2412, in forward
+    return self._engine(z, visibility=mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2375, in forward
+    routed = routed * visibility.unsqueeze(-1)
+             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 320.00 MiB. GPU 0 has a total capacity of 15.60 GiB of which 61.19 MiB is free. Including non-PyTorch memory, this process has 15.53 GiB memory in use. Of the allocated memory 14.64 GiB is allocated by PyTorch, and 706.61 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:pipelines.engine.resolve:Detected 1 CUDA GPUs, using GPULocalTaskRunner
+INFO:pipelines.orchestration.gpu_local_taskrunner:GPULocalTaskRunner initialized with 1 GPUs, max_workers=1
+af3:   0%|          | 0/1 [00:00<?, ?it/s]
+get_data:   0%|          | 0/1 [00:00<?, ?it/s][AWARNING:atomworks.io:Field b_factor not found in file, ignoring.
+WARNING:atomworks.io:Field occupancy not found in file, ignoring.
+
+get_data: 100%|██████████| 1/1 [00:00<00:00,  5.72it/s][Aget_data: 100%|██████████| 1/1 [00:00<00:00,  5.72it/s]
+af3: 100%|██████████| 1/1 [01:50<00:00, 111.00s/it]af3: 100%|██████████| 1/1 [01:50<00:00, 111.00s/it]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:01,  4.99it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:00,  5.23it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:00<00:00,  5.20it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:00<00:00,  5.21it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:00<00:00,  5.26it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00,  6.09it/s]
+Traceback (most recent call last):
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 298, in <module>
+    main()
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 255, in main
+    result = builder.fold(
+             ^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/esm/models/esmfold2/processor.py", line 337, in fold
+    output = model(
+             ^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2.py", line 972, in forward
+    z = self._run_one_loop(
+        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2.py", line 805, in _run_one_loop
+    z = self.folding_trunk(z, pair_attention_mask=pair_mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2639, in forward
+    pair = fn(pair)
+           ^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2595, in forward
+    pair = self.row_drop(pair, self.tri_mul_in(pair, mask=pair_attention_mask))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2412, in forward
+    return self._engine(z, visibility=mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2375, in forward
+    routed = routed * visibility.unsqueeze(-1)
+             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 320.00 MiB. GPU 0 has a total capacity of 15.60 GiB of which 61.19 MiB is free. Including non-PyTorch memory, this process has 15.53 GiB memory in use. Of the allocated memory 14.64 GiB is allocated by PyTorch, and 706.61 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+INFO:pipelines.engine.resolve:Detected 1 CUDA GPUs, using GPULocalTaskRunner
+INFO:pipelines.orchestration.gpu_local_taskrunner:GPULocalTaskRunner initialized with 1 GPUs, max_workers=1
+af3:   0%|          | 0/1 [00:00<?, ?it/s]
+get_data:   0%|          | 0/1 [00:00<?, ?it/s][AWARNING:atomworks.io:Field b_factor not found in file, ignoring.
+WARNING:atomworks.io:Field occupancy not found in file, ignoring.
+
+get_data: 100%|██████████| 1/1 [00:00<00:00,  6.60it/s][Aget_data: 100%|██████████| 1/1 [00:00<00:00,  6.59it/s]
+af3: 100%|██████████| 1/1 [01:52<00:00, 112.86s/it]af3: 100%|██████████| 1/1 [01:52<00:00, 112.86s/it]
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:01,  2.58it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:01,  3.12it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:00<00:00,  3.27it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:01<00:00,  3.33it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:01<00:00,  3.37it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:01<00:00,  3.82it/s]
+Traceback (most recent call last):
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 298, in <module>
+    main()
+  File "/opt/esmfold2/examples/esmfold2_predict.py", line 255, in main
+    result = builder.fold(
+             ^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/esm/models/esmfold2/processor.py", line 337, in fold
+    output = model(
+             ^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2.py", line 972, in forward
+    z = self._run_one_loop(
+        ^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2.py", line 805, in _run_one_loop
+    z = self.folding_trunk(z, pair_attention_mask=pair_mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2639, in forward
+    pair = fn(pair)
+           ^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2595, in forward
+    pair = self.row_drop(pair, self.tri_mul_in(pair, mask=pair_attention_mask))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2412, in forward
+    return self._engine(z, visibility=mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/transformers/models/esmfold2/modeling_esmfold2_common.py", line 2384, in forward
+    mixed = self.proj_emit(self.norm_mix(contracted))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/modules/normalization.py", line 229, in forward
+    return F.layer_norm(
+           ^^^^^^^^^^^^^
+  File "/opt/esmfold2/.pixi/envs/default/lib/python3.12/site-packages/torch/nn/functional.py", line 2901, in layer_norm
+    return torch.layer_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 162.00 MiB. GPU 0 has a total capacity of 15.60 GiB of which 41.19 MiB is free. Including non-PyTorch memory, this process has 15.55 GiB memory in use. Of the allocated memory 15.04 GiB is allocated by PyTorch, and 318.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

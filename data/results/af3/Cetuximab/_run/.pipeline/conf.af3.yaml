@@ -1,0 +1,67 @@
+steps:
+  af3:
+    name: af3
+    store: none
+    store_cleanup: false
+    command_template:
+    - apptainer
+    - exec
+    - --nv
+    - --bind
+    - /mnt/home:/mnt/home
+    - --bind
+    - /home:/home
+    - --bind
+    - /projects:/projects
+    - --bind
+    - /net/databases:/databases
+    - --env
+    - ALPHAFOLD3_WEIGHTS_DIR=/net/databases/alphafold
+    - ${CONTAINER:alphafold3}
+    - python
+    - /home/olnagl/pipelines/src/blocks/scripts/run_alphafold_AF.py
+    - --run_data_pipeline=False
+    - --run_inference=True
+    - --db_dir=/net/databases
+    - --model_dir=/net/databases/alphafold
+    cloud: false
+    diffusion_batch_size: 5
+    read_most_confident_model: true
+    n_recycles: null
+    num_diffusion_steps: 200
+    ckpt_path: null
+    compile_as_metric: false
+    remove_ligands: false
+    specified_smiles: {}
+    specified_ccd: {}
+    disable_ccd_detection: false
+    template_json: null
+    add_ptm_at_mapped_residues: null
+    add_ptm_at_residues: null
+    which: last
+job_args:
+  partition: local
+  mem_gb: 64
+  time_limit: '24:00:00'
+  job_name: af3
+  gres: gpu:large:1
+  constraint: null
+  cpus_per_task: 1
+  rows_per_job: 1
+  num_chunks: null
+  exclude: null
+  exclude_nodes: null
+runtime:
+  mode: local
+  recompile: false
+  force_exec: false
+  allow_errors: false
+  max_retries: 0
+execution:
+  af3:
+    records: 1
+    successful_records: 1
+    failed_records: 0
+    wall_seconds: 110.38
+    gpu_seconds: 110.38
+    gpu_hours: 0.0307

@@ -1,0 +1,9 @@
+Environment variable CCD_MIRROR_PATH not set. Will not be able to use function requiring this variable. To set it you may:
+  (1) add the line 'export VAR_NAME=path/to/variable' to your .bashrc or .zshrc file
+  (2) set it in your current shell with 'export VAR_NAME=path/to/variable'
+  (3) write it to a .env file in the root of the atomworks.io repository
+Environment variable PDB_MIRROR_PATH not set. Will not be able to use function requiring this variable. To set it you may:
+  (1) add the line 'export VAR_NAME=path/to/variable' to your .bashrc or .zshrc file
+  (2) set it in your current shell with 'export VAR_NAME=path/to/variable'
+  (3) write it to a .env file in the root of the atomworks.io repository
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:02,  2.19it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:01,  2.59it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:01<00:01,  2.69it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:01<00:00,  2.25it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:02<00:00,  2.03it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:02<00:00,  2.54it/s]

@@ -1,0 +1,32 @@
+{
+  "dialect": "alphafold3",
+  "version": 4,
+  "name": "ConvergeAB_input",
+  "sequences": [
+    {
+      "protein": {
+        "id": "A",
+        "sequence": "QVQLQQSGPGLVQPSQSLSITCTVSGFSLTNYGVHWVRQSPGKGLEWLGVIWSGGNIDYNAPFTSRLSISRDTSKSQVFFKMNSLQADDTAIYYCARALTYYDYEFAYWGQGTLVTVSSGGGGSGGGGSGGGGSDILTQSPVALSVSPGERVSFSCRASQSIGTNDHWYQQRTNGSPKLLIRYASESISGIPSRFSGSGSGTDFTLSINSVDPEDIADYYCQQNNNAPTTFGAGTKLELK",
+        "modifications": [],
+        "unpairedMsa": "",
+        "pairedMsa": "",
+        "templates": []
+      }
+    },
+    {
+      "protein": {
+        "id": "B",
+        "sequence": "EEKKVCQGTSNKLTQLGTFEDHFLSLQRMFNNCEVVLGNLEITYVQRNYDLSFLKTIQEVAGYVLIALNTVERIPLENLQIIRGNMYYENSYALAVLSNYDANKTGLKELPMRNLQEILHGAVRFSNNPALCNVESIQWRDIVSSDFLSNMSMDFQNHLGSCQK",
+        "modifications": [],
+        "unpairedMsa": "",
+        "pairedMsa": "",
+        "templates": []
+      }
+    }
+  ],
+  "modelSeeds": [
+    1
+  ],
+  "bondedAtomPairs": null,
+  "userCCD": null
+}

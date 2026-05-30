@@ -1,0 +1,76 @@
+=== START 2026-05-30T05:27:12 ===
+
+
+get_data:   0%|          | 0/1 [00:00<?, ?it/s]
+get_data: 100%|██████████| 1/1 [00:00<00:00,  5.72it/s]get_data: 100%|██████████| 1/1 [00:00<00:00,  5.72it/s]
+INFO:2026-05-30 05:27:25,464:jax._src.xla_bridge:812: Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+I0530 05:27:25.464680 132031205577024 xla_bridge.py:812] Unable to initialize 
+backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared
+object file: No such file or directory
+W0530 05:27:25.621513 1239746 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+W0530 05:27:25.632307 1239643 cuda_executor.cc:1802] GPU interconnect 
+information not available: INTERNAL: NVML doesn't support extracting fabric info
+or NVLink is not used by the device.
+I0530 05:27:37.182731 132031205577024 pipeline.py:177] processing 
+ConvergeAB_input, random_seed=1
+I0530 05:27:37.771800 132031205577024 pipeline.py:270] Calculating bucket size 
+for input with 404 tokens.
+I0530 05:27:37.772118 132031205577024 pipeline.py:276] Got bucket size 512 for 
+input with 404 tokens, resulting in 108 padded tokens.
+I0530 05:27:43.380889 132031205577024 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_gated_linear_unit.json
+I0530 05:27:43.629159 132031205577024 cache.py:95] Autotuning cache file not 
+found: 
+/opt/af3-env/lib/python3.12/site-packages/tokamax/data/autotuning/nvidia_rtx_a40
+00/pallas_triton_flash_attention.json
+/opt/af3-env/lib/python3.12/site-packages/alphafold3/model/network/featurization
+.py:104: UserWarning: Explicitly requested dtype int64 requested in 
+broadcasted_iota is not available, and will be truncated to dtype int32. To 
+enable more dtypes, set the jax_enable_x64 configuration option or the 
+JAX_ENABLE_X64 shell environment variable. See 
+https://github.com/jax-ml/jax#current-gotchas for more.
+  iota = jax.lax.broadcasted_iota(jnp.int64, logits.shape, axis)
+Running AlphaFold 3. Please note that standard AlphaFold 3 model parameters are
+only available under terms of use provided at
+https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md.
+If you do not agree to these terms and are using AlphaFold 3 derived model
+parameters, cancel execution of AlphaFold 3 inference with CTRL-C, and do not
+use the model parameters.
+Skipping running the data pipeline.
+Found local devices: [CudaDevice(id=0)]
+Building model from scratch...
+Processing fold inputs.
+Processing fold input #1
+Processing fold input ConvergeAB_input
+Checking we can load the model parameters...
+Skipping data pipeline...
+Output directory: 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk
+_0/outputs/ConvergeAB_input
+Writing model input JSON to 
+/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk
+_0/outputs/ConvergeAB_input
+Predicting 3D structure for ConvergeAB_input for seed(s) (1,)...
+Featurising data for seeds (1,)...
+Featurising data with seed 1.
+Featurising data with seed 1 took 6.02 seconds.
+Featurising data for seeds (1,) took  12.34 seconds.
+Running model inference for seed 1...
+Running model inference for seed 1 took  73.37 seconds.
+Extracting output structures (one per sample) for seed 1...
+Extracting output structures (one per sample) for seed 1 took  0.90 seconds.
+Running model inference and extracting output structures for seed 1 took 74.27 
+seconds.
+Running model inference and extracting output structures for seeds (1,) took 
+74.27 seconds.
+Writing outputs for ConvergeAB_input for seed(s) (1,)...
+Done processing fold input ConvergeAB_input.
+Done processing 1 fold inputs (0 skipped).
+
+=== END 2026-05-30T05:29:03 | elapsed: 110.9s ===

@@ -1,0 +1,31 @@
+{
+  "name": "af3",
+  "command": [
+    "apptainer",
+    "exec",
+    "--nv",
+    "--bind",
+    "/mnt/home:/mnt/home",
+    "--bind",
+    "/home:/home",
+    "--bind",
+    "/projects:/projects",
+    "--bind",
+    "/net/databases:/databases",
+    "--env",
+    "ALPHAFOLD3_WEIGHTS_DIR=/net/databases/alphafold",
+    "/net/software/containers/pipelines/alphafold3.sif",
+    "python",
+    "/home/olnagl/pipelines/src/blocks/scripts/run_alphafold_AF.py",
+    "--run_data_pipeline=False",
+    "--run_inference=True",
+    "--db_dir=/net/databases",
+    "--model_dir=/net/databases/alphafold",
+    "--input_dir=/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_0/inputs",
+    "--output_dir=/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_0/outputs",
+    "--num_diffusion_samples=5",
+    "--jax_compilation_cache_dir=/projects/ml/pipelines/weights/af3_cache"
+  ],
+  "cwd": "/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_0",
+  "command_str": "apptainer exec --nv --bind /mnt/home:/mnt/home --bind /home:/home --bind /projects:/projects --bind /net/databases:/databases --env ALPHAFOLD3_WEIGHTS_DIR=/net/databases/alphafold /net/software/containers/pipelines/alphafold3.sif python /home/olnagl/pipelines/src/blocks/scripts/run_alphafold_AF.py --run_data_pipeline=False --run_inference=True --db_dir=/net/databases --model_dir=/net/databases/alphafold --input_dir=/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_0/inputs --output_dir=/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/Cetuximab/_run/af3/chunk_0/outputs --num_diffusion_samples=5 --jax_compilation_cache_dir=/projects/ml/pipelines/weights/af3_cache"
+}

@@ -1,0 +1,22 @@
+{
+  "block_name": "af3",
+  "sandbox": "/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk_0",
+  "source": "compiled_block",
+  "status": "success",
+  "started_at": "2026-05-30T12:27:12.720107+00:00",
+  "ended_at": "2026-05-30T12:29:03.360448+00:00",
+  "wall_seconds": 110.64025120809674,
+  "allocated_gpus": 1,
+  "gpu_seconds": 110.64025120809674,
+  "attempt": 1,
+  "hostname": "g2125",
+  "pid": 1235100,
+  "chunk_id": 0,
+  "command": "apptainer exec --nv --bind /mnt/home:/mnt/home --bind /home:/home --bind /projects:/projects --bind /net/databases:/databases --env ALPHAFOLD3_WEIGHTS_DIR=/net/databases/alphafold /net/software/containers/pipelines/alphafold3.sif python /home/olnagl/pipelines/src/blocks/scripts/run_alphafold_AF.py --run_data_pipeline=False --run_inference=True --db_dir=/net/databases --model_dir=/net/databases/alphafold --input_dir=/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk_0/inputs --output_dir=/mnt/home/olnagl/pipelines/t3_capsids/data/results/af3/ConvergeAB/_run/af3/chunk_0/outputs --num_diffusion_samples=5 --jax_compilation_cache_dir=/projects/ml/pipelines/weights/af3_cache",
+  "backend": "slurm",
+  "job_id": "2316252",
+  "gpu_ids": [
+    0
+  ],
+  "error": null
+}
